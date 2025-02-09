@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie & TV Show Explorer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+    <h1>🎬 Movie & TV Show Explorer</h1>
+
+    <!-- Search bar and genre filter -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for movies...">
+        <button id="searchBtn">Search</button>
+        <select id="genreFilter">
+            <option value="">All Genres</option>
+        </select>
+    </div>
+
+    <!-- Sections for search results and trending movies -->
+    <div class="movie-sections">
+        <div class="movies-box">
+            <h2>🔍 Search Results</h2>
+            <div id="moviesContainer" class="movies-grid"></div> <!-- Container for search results -->
+        </div>
+        <div class="movies-box">
+            <h2>🔥 Trending Movies</h2>
+            <div id="trendingMovies" class="movies-grid"></div> <!-- Container for trending movies -->
+        </div>
+    </div>
+
+    <!-- Watchlist Section -->
+    <h2>📌 Watchlist</h2>
+    <div id="watchlistContainer" class="movies-grid"></div> <!-- Container for watchlist items -->
+
+    <!-- Recommended Movies Section -->
+    <h2>🎥 Recommended Movies</h2>
+    <div id="recommendedMovies" class="movies-grid"></div> <!-- Container for recommended movies -->
+
+    <!-- Movie Details Popup -->
+    <div id="moviePopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close-popup">&times;</span> <!-- Close button -->
+            <h2 id="popupTitle"></h2> <!-- Movie title -->
+            <img id="popupPoster" src="" alt="Movie Poster"> <!-- Movie poster -->
+            <p id="popupDetails"></p> <!-- Movie details -->
+            <button id="watchTrailerBtn">Watch Trailer</button> <!-- Button to watch trailer -->
+        </div>
+    </div>
+
+    <!-- Trailer Popup -->
+    <div id="trailerPopup" class="popup">
+        <div class="popup-content">
+            <span id="closeTrailer" class="close-popup">&times;</span> <!-- Close button -->
+            <iframe id="trailerFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe> 
+            <!-- Embedded trailer video -->
+        </div>
+    </div>
+
+    <!-- Duplicate Warning Popup -->
+    <div id="duplicatePopup" class="popup">
+        <div class="popup-content">
+            <span id="closeDuplicate" class="close-popup">&times;</span> <!-- Close button -->
+            <p>This movie is already in your watchlist!</p> <!-- Warning message -->
+        </div>
+    </div>
+
+    <!-- Watchlist Notification -->
+    <div id="watchlistPopup" class="watchlist-popup">Movie added to Watchlist! 🎬</div>
+
+    <script src="script.js"></script> <!-- Linking external JavaScript file -->
+</body>
+</html>
